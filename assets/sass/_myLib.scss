@@ -1,0 +1,80 @@
+/*
+  * MIXINS
+  */
+
+@mixin square($size) {
+  width: $size;
+  height: $size;
+}
+
+@mixin circle($size) {
+  @include square($size);
+  border-radius: 50%;
+}
+
+/*
+  * PLACEHOLDERS
+  */
+
+%flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+%flex-space-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+%flex-start {
+  display: flex;
+  justify-content: flex-start;
+}
+
+%flex-end {
+  display: flex;
+  justify-content: flex-end;
+}
+
+%position-center {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+%position-middle-x {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+%position-middle-y {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+%list-reset,
+%reset-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/*
+  * CLASSES
+  */
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.list-reset,
+.reset-list {
+  @extend %list-reset;
+}
+
+@for $i from 1 through 100 {
+  .scale-#{$i}x {
+    transform: scale(#{$i});
+  }
+}

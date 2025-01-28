@@ -1,0 +1,153 @@
+@use 'main';
+@use 'myLib';
+
+
+@keyframes dash-anim {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(100%);
+  }
+}
+
+.landing {
+  overflow-y: hidden;
+  height: 100vh;
+  width: 100%;
+  color: white;
+  background-color: black;
+  position: relative;
+  text-transform: capitalize;
+  text-align: center;
+  .heading {
+    position: absolute;
+    width: 100%;
+    padding: 0 20px;
+    @extend %position-center;
+    .main-heading {
+      font: {
+        size: 3rem;
+        weight: 900;
+      }
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      letter-spacing: 5px;
+    }
+    .sub-heading {
+      font: {
+        size: 2rem;
+        weight: normal;
+      }
+      letter-spacing: 7px;
+    }
+  }
+  .brief {
+    position: absolute;
+    left: 40px;
+    bottom: 40px;
+    font-family: Mulish;
+    font-size: 1rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 0 20px;
+    strong {
+      font-weight: normal;
+      color: #767676;
+    }
+    @media (max-width: 700px) {
+      width: 100%;
+      left: 50%;
+      bottom: 60px;
+      transform: translateX(-50%);
+    }
+  }
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: {
+      image: url('https://marketifythemes.net/html/grax//img/patterns/light-honeycomb.png');
+    }
+    opacity: .4;
+  }
+  .dash {
+    position: absolute;
+    height: 50px;
+    width: 1px;
+    @extend %position-middle-x;
+    bottom: 0;
+    overflow-y: hidden;
+    &::before {
+      content: '';
+      background-color: white;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      animation: dash-anim 2s infinite ease-in-out;
+      z-index: 2;
+    }
+  }
+}
+
+main {
+  .main-heading {
+    font: {
+      weight: 800;
+      size: 2rem
+    }
+    letter-spacing: 8px;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 150px auto 100px;
+  }
+  nav ul {
+    @extend %list-reset;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 50px 30px;
+    li {
+      width: 100%;
+      cursor: pointer;
+      transition: .3s;
+      &.hover {
+        transform: translateY(-50px);
+      }
+      a {
+        box-shadow: 7px 7px 12px 0 rgba(0, 0, 0, .4);
+        display: block;
+        width: 100%;
+        cursor: pointer;
+        &.coming-soon {
+          img {
+            filter: blur(5px) brightness(70%);
+          }
+          article h5 {
+            color: #777;
+            text-transform: capitalize;
+            &::after {
+              content: '..';
+            }
+          }
+        }
+        img {
+          width: 100%;
+        }
+        article {
+          padding: 20px;
+          h5 {
+            font: {
+              size: 1.4rem;
+              weight: 700;
+            }
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+          }
+        }
+      }
+    }
+  }
+}
