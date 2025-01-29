@@ -5,6 +5,12 @@ body {
   a {
     cursor: none !important;
   }
+  @media (max-width: 1040px) {
+    cursor: auto !important;
+    a {
+      cursor: pointer !important;
+    }
+  }
 }
 
 .cursor {

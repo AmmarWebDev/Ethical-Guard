@@ -1,5 +1,6 @@
 footer {
   margin-top: 150px;
+  box-shadow: 0 0 0 0 black;
   .wave-effect {
     position: relative;
     bottom: -7px;
@@ -17,8 +18,11 @@ footer {
       .logo {
         font-size: 2rem;
         font-weight: 900;
-        text-transform: capitalize;
+        text-transform: uppercase;
         letter-spacing: 5px;
+        @media (max-width: 400px) {
+          font-size: 1.8rem;
+        }
       }
       .copyright {
         text-transform: uppercase;
@@ -31,6 +35,13 @@ footer {
           color: white;
           margin-left: 10px;
           font-size: 1.1rem;
+        }
+      }
+      @media (max-width: 750px) {
+        flex-direction: column;
+        text-align: center;
+        > *:not(:last-child) {
+          margin-bottom: 20px;
         }
       }
     }

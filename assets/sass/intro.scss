@@ -112,8 +112,8 @@ main {
       width: 100%;
       cursor: pointer;
       transition: .3s;
-      &.hover {
-        transform: translateY(-50px);
+      &:hover {
+        transform: translateY(-20px) scale(1.05);
       }
       a {
         box-shadow: 7px 7px 12px 0 rgba(0, 0, 0, .4);
