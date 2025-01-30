@@ -5,12 +5,12 @@ html(lang="en")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     link(rel="stylesheet", href="static/css/intro.min.css")
     link(rel="icon", href="static/svg/logo.svg", type="image/svg+xml")
-    title Ethical Guard | Intro
+    title Intro
   body 
     //- Landing -//
     .landing
       .heading
-        h1.main-heading ethical guard
+        h1.main-heading internet guardians
         h3.sub-heading no system is safe
       .brief
         p we teach <strong>cybersecurity</strong> through articles
@@ -20,40 +20,28 @@ html(lang="en")
       h2.main-heading 10+ ready articles
       nav.container
         ul
-          li: a
+          li: a(href="posts/article-1.htm", target="_blank")
             img(src="static/images/article.jpg", alt="image")
             article
               h5 Article #1
               p This is very interesting article
-          li: a
+          li: a(href="posts/article-1.htm", target="_blank")
             img(src="static/images/article.jpg", alt="image")
             article
               h5 Article #2
               p This is very interesting article
-          li: a
+          li: a(href="posts/article-1.htm", target="_blank")
             img(src="static/images/article.jpg", alt="image")
             article
               h5 Article #3
               p This is very interesting article
-          li: a
+          li: a(href="posts/article-1.htm", target="_blank")
             img(src="static/images/article.jpg", alt="image")
             article
               h5 Article #4
               p This is very interesting article
-          li: a.coming-soon
+          li: a.coming-soon(href="posts/article-1.htm", target="_blank")
             img(src="static/images/article.jpg", alt="image")
             article
               h5 Coming Soon
-    footer
-      svg.wave-effect(viewBox="0 0 1000 200" xmlns="http://www.w3.org/2000/svg")
-        path#wave(fill="#000" d="")
-      .content: .container 
-        .logo ethical guard
-        p.copyright copyright 2025 <i class="fa-regular fa-copyright"></i>
-        nav.social
-          a(href="#"): <i class="fa-brands fa-facebook"></i>
-          a(href="#"): <i class="fa-brands fa-github"></i>
-          a(href="#"): <i class="fa-brands fa-tiktok"></i>
-          a(href="#"): <i class="fa-brands fa-x-twitter"></i>
-          a(href="#"): <i class="fa-brands fa-discord"></i>
     script(src="static/js/main.js")

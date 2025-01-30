@@ -113,6 +113,10 @@ footer .content .container {
           align-items: center;
   padding-bottom: 50px;
 }
+footer .content .container .logo {
+  color: white;
+  text-decoration: none;
+}
 footer .content .container .logo svg {
   width: 50px;
   height: 50px;
@@ -120,7 +124,7 @@ footer .content .container .logo svg {
 }
 footer .content .container .logo span {
   font-size: 2rem;
-  font-weight: 900;
+  font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 5px;
   text-align: center;

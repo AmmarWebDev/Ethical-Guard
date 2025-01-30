@@ -18,13 +18,15 @@ footer {
       padding-bottom: 50px;
       .logo {
         @extend %flex-center;
+        color: white;
+        text-decoration: none;
         svg {
           @include myLib.square(50px);
           margin-right: 10px;
         }
         span {
           font-size: 2rem;
-          font-weight: 900;
+          font-weight: 400;
           text-transform: uppercase;
           letter-spacing: 5px;
           text-align: center;

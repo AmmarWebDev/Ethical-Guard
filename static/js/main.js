@@ -11,7 +11,7 @@ Array.max = (e) => Math.max(...e);
 //! Adjusting the head //
 
 // editing the document title
-document.title = `Internet Guards | ${document.title.capitalize()}`;
+document.title = `Internet Guardians | ${document.title.capitalize()}`;
 
 
 //! Creating the header //
@@ -98,7 +98,7 @@ footer.innerHTML = `
   </svg>
   <div class="content">
     <div class="container">
-      <div class="logo">
+      <a class="logo" href="../index.htm">
         <svg
           version="1.0"
           xmlns="http://www.w3.org/2000/svg"
@@ -131,7 +131,7 @@ footer.innerHTML = `
           </g>
         </svg>
         <span>internet guardians</span>
-      </div>
+      </a>
       <div class="social-media">
       <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
       <a href="#"><i class="fa-brands fa-github"></i></a>
@@ -140,7 +140,7 @@ footer.innerHTML = `
       <a href="#"><i class="fa-brands fa-youtube"></i></a>
       </div>
       <div class="copyright">
-        <span>copyright 2025</span>
+        <span>copyright ${new Date().getFullYear()}</span>
         <i class="fa-regular fa-copyright"></i>
       </div>
     </div>
