@@ -13,14 +13,6 @@ Array.max = (e) => Math.max(...e);
 // editing the document title
 document.title = `Internet Guards | ${document.title.capitalize()}`;
 
-// adding the favicon
-const linkFavicon = document.createElement('link');
-linkFavicon.rel = 'shortcut icon';
-linkFavicon.href = '/static/svg/logo.svg';
-linkFavicon.type = 'image/x-icon'
-
-document.head.appendChild(linkFavicon);
-
 
 //! Creating the header //
 
@@ -140,16 +132,16 @@ footer.innerHTML = `
         </svg>
         <span>internet guardians</span>
       </div>
+      <div class="social-media">
+      <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+      <a href="#"><i class="fa-brands fa-github"></i></a>
+      <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+      <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+      <a href="#"><i class="fa-brands fa-youtube"></i></a>
+      </div>
       <div class="copyright">
         <span>copyright 2025</span>
         <i class="fa-regular fa-copyright"></i>
-      </div>
-      <div class="social-media">
-        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-        <a href="#"><i class="fa-brands fa-github"></i></a>
-        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-        <a href="#"><i class="fa-brands fa-tiktok"></i></a>
-        <a href="#"><i class="fa-brands fa-youtube"></i></a>
       </div>
     </div>
   </div>
