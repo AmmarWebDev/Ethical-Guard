@@ -1,6 +1,7 @@
+@use 'myLib';
+
 footer {
-  margin-top: 150px;
-  box-shadow: 0 0 0 0 black;
+  margin-top: 50px;
   .wave-effect {
     position: relative;
     bottom: -7px;
@@ -16,12 +17,23 @@ footer {
       align-items: center;
       padding-bottom: 50px;
       .logo {
-        font-size: 2rem;
-        font-weight: 900;
-        text-transform: uppercase;
-        letter-spacing: 5px;
-        @media (max-width: 400px) {
-          font-size: 1.8rem;
+        @extend %flex-center;
+        svg {
+          @include myLib.square(50px);
+          margin-right: 10px;
+        }
+        span {
+          font-size: 2rem;
+          font-weight: 900;
+          text-transform: uppercase;
+          letter-spacing: 5px;
+          text-align: center;
+        }
+        @media (max-width: 475px) {
+          flex-direction: column;
+          svg {
+            margin-bottom: 10px;
+          }
         }
       }
       .copyright {
@@ -30,21 +42,36 @@ footer {
         font-weight: 500;
         letter-spacing: 1px;
       }
-      .social {
+      .social-media {
         a {
           color: white;
           margin-left: 10px;
           font-size: 1.1rem;
         }
       }
-      @media (max-width: 750px) {
+      @media (max-width: 1000px) {
         flex-direction: column;
-        text-align: center;
-        > *:not(:last-child) {
+        align-items: center;
+        >:not(:last-child) {
           margin-bottom: 20px;
+        }
+      }
+      @media (max-width: 600px) {
+        .logo {
+          svg {
+            @include myLib.square(30px);
+          }
+          span {
+            font-size: 1.4rem;
+          }
+        }
+        .copyright {
+          font-size: .9rem;
+        }
+        .social-media {
+          font-size: 1rem;
         }
       }
     }
   }
 }
-

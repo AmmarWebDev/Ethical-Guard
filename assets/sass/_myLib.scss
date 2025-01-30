@@ -72,9 +72,3 @@
 .reset-list {
   @extend %list-reset;
 }
-
-@for $i from 1 through 100 {
-  .scale-#{$i}x {
-    transform: scale(#{$i});
-  }
-}

@@ -1,17 +1,17 @@
 @use 'myLib';
 
-body {
-  cursor: none !important;
-  a {
-    cursor: none !important;
-  }
-  @media (max-width: 1040px) {
-    cursor: auto !important;
-    a {
-      cursor: pointer !important;
-    }
-  }
-}
+// body {
+//   cursor: none !important;
+//   a {
+//     cursor: none !important;
+//   }
+//   @media (max-width: 1040px) {
+//     cursor: auto !important;
+//     a {
+//       cursor: pointer !important;
+//     }
+//   }
+// }
 
 .cursor {
   position: fixed;
@@ -29,6 +29,9 @@ body {
     left: 2px;
     top: 2px;
     transform: translate(-50%, -50%);
+  }
+  &.typing {
+    transform: scale(.8);
   }
   &.hover {
     transform: scale(1.5);
