@@ -451,6 +451,9 @@ main .content ul, main .content ol {
   font-size: 1.3rem;
   line-height: 1.6;
 }
+main .content ul::marker, main .content ol::marker {
+  font-family: "Work Sans", Mulish, Poppins, sans-serif;
+}
 main .content ul + p, main .content ol + p {
   padding-top: 0;
   margin-top: -20px;
