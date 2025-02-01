@@ -14,13 +14,16 @@ main {
   }
   .heading {
     font-family: 'Work Sans', Poppins, sans-serif;
-    h2{
-      text-transform: capitalize;
+    :is(h1, h2, h3, h4, h5, h6) {
+      text: {
+        transform: capitalize;
+        align: center;
+        decoration: underline;
+      }
       font-size: 3rem;
       font-weight: 700;
       margin: 20px 0 40px;
       line-height: 1.5;
-      text-decoration: underline;
       @media (max-width: 800px) {
         font-size: 2rem;
       }
@@ -32,13 +35,15 @@ main {
       }
     }
     img {
-      width: 100%;
+      display: block;
+      margin: auto;
+      max-width: 100%;
     }
   }
   .content {
     margin-top: 50px;
     font-family: 'Work Sans', Poppins, sans-serif;
-    h3 {
+    :is(h1, h2, h3, h4, h5, h6) {
       font-family: poppins, 'Work Sans', sans-serif;
       background-color: #f1f1f1;
       padding: 20px;
@@ -58,16 +63,32 @@ main {
         text-transform: capitalize;
       }
     }
+    ul, ol {
+      padding: 0 20px 20px;
+      margin: -20px 30px 15px;
+      font-size: 1.3rem;
+      line-height: 1.6;
+      & + p {
+        padding-top: 0;
+        margin-top: -20px;
+      }
+    }
     img {
+      display: block;
+      margin: auto;
       width: 100%;
     }
     @media (max-width: 600px) {
-      h3 {
+      :is(h1, h2, h3, h4, h5, h6) {
         font-size: 1.1rem;
       }
       p {
         font-size: 1rem;
         padding: 10px 20px;
+      }
+      ul, ol {
+        font-size: 1rem;
+        margin: -20px 20px 15px;
       }
     }
   }

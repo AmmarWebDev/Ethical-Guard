@@ -350,6 +350,29 @@ a {
   font-weight: 500;
 }
 
+button {
+  cursor: pointer;
+  background-color: black;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  text-transform: capitalize;
+  font-family: Mulish, "Work Sans", Poppins, sans-serif;
+  font-size: 0.9em;
+}
+button a {
+  color: white;
+  text-decoration: none;
+}
+
+code {
+  font-family: monospace;
+  background-color: #ddd;
+  padding: 3px 7px;
+  border-radius: 3px;
+}
+
 img {
   font-family: monospace;
   font-size: 1.1rem;
@@ -369,37 +392,40 @@ main .container {
 main .heading {
   font-family: "Work Sans", Poppins, sans-serif;
 }
-main .heading h2 {
+main .heading :is(h1, h2, h3, h4, h5, h6) {
   text-transform: capitalize;
+  text-align: center;
+  text-decoration: underline;
   font-size: 3rem;
   font-weight: 700;
   margin: 20px 0 40px;
   line-height: 1.5;
-  text-decoration: underline;
 }
 @media (max-width: 800px) {
-  main .heading h2 {
+  main .heading :is(h1, h2, h3, h4, h5, h6) {
     font-size: 2rem;
   }
 }
 @media (max-width: 600px) {
-  main .heading h2 {
+  main .heading :is(h1, h2, h3, h4, h5, h6) {
     font-size: 1.6rem;
   }
 }
 @media (max-width: 400px) {
-  main .heading h2 {
+  main .heading :is(h1, h2, h3, h4, h5, h6) {
     font-size: 1.4rem;
   }
 }
 main .heading img {
-  width: 100%;
+  display: block;
+  margin: auto;
+  max-width: 100%;
 }
 main .content {
   margin-top: 50px;
   font-family: "Work Sans", Poppins, sans-serif;
 }
-main .content h3 {
+main .content :is(h1, h2, h3, h4, h5, h6) {
   font-family: poppins, "Work Sans", sans-serif;
   background-color: #f1f1f1;
   padding: 20px;
@@ -419,16 +445,32 @@ main .content p {
 main .content p::first-letter {
   text-transform: capitalize;
 }
+main .content ul, main .content ol {
+  padding: 0 20px 20px;
+  margin: -20px 30px 15px;
+  font-size: 1.3rem;
+  line-height: 1.6;
+}
+main .content ul + p, main .content ol + p {
+  padding-top: 0;
+  margin-top: -20px;
+}
 main .content img {
+  display: block;
+  margin: auto;
   width: 100%;
 }
 @media (max-width: 600px) {
-  main .content h3 {
+  main .content :is(h1, h2, h3, h4, h5, h6) {
     font-size: 1.1rem;
   }
   main .content p {
     font-size: 1rem;
     padding: 10px 20px;
+  }
+  main .content ul, main .content ol {
+    font-size: 1rem;
+    margin: -20px 20px 15px;
   }
 }
 /*# sourceMappingURL=posts.min.css.map */
